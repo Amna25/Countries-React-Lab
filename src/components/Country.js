@@ -1,9 +1,14 @@
 import React from 'react'
 
-const Country = ({name, population}) => {
+const Country = ({country, name, population, onCountryClick}) => {
+
+    const handleClick = () => {
+        onCountryClick(country)
+    }
     return (
         <div>
-        <h3>{name}  by {population} </h3>
+        <h3 onClick={handleClick}>  {name}  has a population of {population} </h3>
+        
             
         </div>
     )
